@@ -1,5 +1,7 @@
 var stage = new createjs.Stage("demoCanvas");
 var circle = new createjs.Shape();
+var soundID = "Thunder";
+
 
 circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
 circle.x = 100;
@@ -19,4 +21,12 @@ function init() {
     alert('hello world');
     createjs.Ticker.setFPS(60);
     createjs.Ticker.addEventListener("tick", stage);
+}
+
+function loadSound () {
+  createjs.Sound.registerSound("assets/thunder.mp3", soundID);
+}
+
+function playSound () {
+  createjs.Sound.play(soundID);
 }
