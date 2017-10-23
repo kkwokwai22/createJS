@@ -16,6 +16,7 @@ createjs.Tween.get(circle, { loop: true })
 
 
 function init() {
+    alert('hello world');
     createjs.Ticker.setFPS(60);
     createjs.Ticker.addEventListener("tick", stage);
 }
